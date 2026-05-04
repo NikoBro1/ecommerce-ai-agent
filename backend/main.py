@@ -44,19 +44,20 @@ def research(data: ResearchRequest):
         prompt = f"""
         You are an expert e-commerce product researcher.
 
-        Find 3 winning products for:
+        Return your answer in this EXACT format:
+
+        === PRODUCTS ===
+        (List 3 products with name, price, why it sells)
+
+        === ADS ===
+        (Write 3 TikTok ad ideas)
+
+        ===MARKETING PLAN ===
+        (7-day simple plan)
+
         Niche: {data.niche}
         Country: {data.country}
         Budget: {data.budget}
-
-        For each product give:
-        - Product name
-        - Why it will sell
-        - Target customer
-        - Estimated cost
-        - Selling price
-        - TikTok ad hook
-        - 7-day marketing plan
         """
 
         response = client.responses.create(
