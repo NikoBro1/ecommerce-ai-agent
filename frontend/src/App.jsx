@@ -11,7 +11,7 @@ function App() {
     setLoading(true);
     setResult("");
 
-    const res = await fetch("http://127.0.0.1:8000/research", {
+    const res = await fetch("https://ecommerce-ai-agent-gj8a.onrender.com/research", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
