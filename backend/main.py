@@ -18,7 +18,9 @@ app = FastAPI()
 # 🔥 CORS (allow all for now)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+    "https://ecommerce-ai-agent-ew1ko5cet-nikobro1s-projects.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
